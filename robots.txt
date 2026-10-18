@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.theroyalconsultants.com/sitemap.xml
+Sitemap: https://theroyalconsultants.com/sitemap.xml

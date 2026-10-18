@@ -492,3 +492,23 @@ h4{font-family:var(--sans)}
 @media (max-width:640px){.since{font-size:.76rem;padding:6px 12px 6px 6px}.since b{padding:3px 8px}.pc-b{top:-4%}.pc-a{bottom:0}}
 @media (max-width:1100px){.pp-stage{height:auto;padding:80px 0 60px;margin-top:10px}}
 @media (max-width:640px){.pp-stage{padding:70px 0 56px}.pc-b{top:4px}.pc-a{bottom:4px}}
+/* ===== v1.1 fixes ===== */
+/* tabs: all panels share one cell, so height never changes */
+.svc-panels{display:grid}
+.svc-panels > .svc-panel{grid-area:1/1;min-height:0;transition:opacity .45s ease,transform .45s ease}
+.svc-panels > .svc-panel[hidden]{display:block!important;visibility:hidden;opacity:0;transform:translateY(8px);pointer-events:none}
+/* nav: no wrapping; collapse to menu button below 1180px */
+.logo span{white-space:nowrap}
+.menu > li > a{white-space:nowrap}
+@media (max-width:1180px){
+  .strip .l{display:none}
+  .burger{display:block}
+  .nav-r .btn{display:none}
+  .menu{position:fixed;top:118px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--cream);padding:12px 16px 22px;border-bottom:1px solid var(--line);box-shadow:var(--sh);transform:translateY(-140%);transition:transform .35s;max-height:calc(100svh - 118px);overflow:auto}
+  .nav-open .menu{transform:none}
+  .menu > li > a{padding:14px 10px;font-size:1rem}
+  .dd-p{position:static;transform:none;opacity:1;visibility:visible;box-shadow:none;border:0;background:transparent;padding:0 0 0 6px;min-width:0}
+}
+@media (max-width:640px){.menu{top:68px;max-height:calc(100svh - 68px)}}
+/* chips clear of the bottom stamp */
+.pc-a{bottom:2%}
