@@ -1,0 +1,20 @@
+{
+  "name": "The Royal Consultants",
+  "short_name": "TRC",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fbf8f1",
+  "theme_color": "#0b1b3f",
+  "icons": [
+    {
+      "src": "assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
